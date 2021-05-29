@@ -30,10 +30,11 @@ module Key_Schedule(
 	 
 	 // Embedded signals
 	 reg [7:0] 		expanded_key		[0:175];
-//	 reg [7:0] 		expanded_key_aux	[0:175];
+	 reg [7:0] 		expanded_key_aux	[0:175];
 	 reg [7:0] 		Key_temp 			[0:15];
-//	 reg [7:0] 		temp_aux 			[0:3];	 
-	 reg [7:0] 		temp 					[0:3];
+	 reg [7:0] 		temp_aux 			[0:3];	 
+	 reg [7:0] 		temp 				[0:3];
+//	 reg [7:0] 		temp 				[0:3];
 	 reg [7:0] 		aux;
 	 integer i = 1;
 	 
@@ -69,7 +70,7 @@ module Key_Schedule(
 							8'h20, 8'h40, 8'h80, 8'h1B, 8'h36};
 							
 	
-
+​
 	// Initialize the first 16 blocks with the original key
 	integer j;
 	integer a;
@@ -103,10 +104,11 @@ module Key_Schedule(
 				temp[1] = temp[2];
 				temp[2] = temp[3];
 				temp[3] = aux;	
-
+​
 				for (x = 0; x < 4; x = x + 1)
 				begin
-					temp[x] = Sbox[temp[x]]; 
+					temp_aux[x] = temp[x];
+					temp[x] = Sbox[temp_aux[x]]; 
 				end
 				
 				//Adding (XOR) this result to the word 4 positions earlier plus a round constant Rcon
@@ -117,14 +119,15 @@ module Key_Schedule(
 			//Adding (XOR) to the temp vector
 			for (y = 0; y < 4; y = y + 1)
 			begin
-				expanded_key[c] = expanded_key[c-16] ^ temp[y];
+				expanded_key_aux[c] = expanded_key[c-16];
+				expanded_key[c] = expanded_key_aux[c] ^ temp[y];
 			end
 			
 		end
 	end
 	endgenerate
 		
-
+​
 	always @(posedge(Clk) or posedge(Rst))
 	begin
 		if(Rst)
@@ -195,7 +198,7 @@ module Key_Schedule(
 	end
 	
 	//Output
-	//assign Key[127:111] = Key_temp[0];
-
+	assign Key[127:111] = Key_temp[0];
+​
 endmodule
-
+​
