@@ -24,6 +24,9 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Key_Scheduler.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Key_Selector.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="LogicReset_VTF_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="LogicReset_VTF_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="LogicReset_VTF_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="StateMachine.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="StateMachine_VTF_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="StateMachine_VTF_stx_beh.prj"/>
@@ -39,16 +42,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1623097510" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100429" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1623100429">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1623097510" xil_pn:in_ck="895798796322452710" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100430" xil_pn:in_ck="33117423959929546" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1623100429">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="AES_Decryptor.v"/>
       <outfile xil_pn:name="AES_Encryptor.v"/>
-      <outfile xil_pn:name="AddRoundKey.v"/>
       <outfile xil_pn:name="AddRoundKeyDecryptor.v"/>
       <outfile xil_pn:name="AddRoundKey_VTF.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -60,6 +62,8 @@
       <outfile xil_pn:name="Key_Scheduler_VTF.v"/>
       <outfile xil_pn:name="Key_Selector.v"/>
       <outfile xil_pn:name="Key_Selector_VTF.v"/>
+      <outfile xil_pn:name="LogicReset.v"/>
+      <outfile xil_pn:name="LogicReset_VTF.v"/>
       <outfile xil_pn:name="MixColumns.v"/>
       <outfile xil_pn:name="MixColumns_VTF.v"/>
       <outfile xil_pn:name="Mux.v"/>
@@ -74,26 +78,24 @@
       <outfile xil_pn:name="StateMachine_VTF.v"/>
       <outfile xil_pn:name="SubBytes.v"/>
       <outfile xil_pn:name="SubBytes_VTF.v"/>
-      <outfile xil_pn:name="Top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1623097510" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="9170302757641953431" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100430" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2953834366881031241" xil_pn:start_ts="1623100430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1623097510" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2002815806861674069" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100430" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4064686352196157813" xil_pn:start_ts="1623100430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1623026826" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4948717689877844648" xil_pn:start_ts="1623026826">
+    <transform xil_pn:end_ts="1623100430" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4991591913869282729" xil_pn:start_ts="1623100430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1623097510" xil_pn:in_ck="895798796322452710" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100430" xil_pn:in_ck="33117423959929546" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1623100430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="AES_Decryptor.v"/>
       <outfile xil_pn:name="AES_Encryptor.v"/>
-      <outfile xil_pn:name="AddRoundKey.v"/>
       <outfile xil_pn:name="AddRoundKeyDecryptor.v"/>
       <outfile xil_pn:name="AddRoundKey_VTF.v"/>
       <outfile xil_pn:name="Controller.v"/>
@@ -105,6 +107,8 @@
       <outfile xil_pn:name="Key_Scheduler_VTF.v"/>
       <outfile xil_pn:name="Key_Selector.v"/>
       <outfile xil_pn:name="Key_Selector_VTF.v"/>
+      <outfile xil_pn:name="LogicReset.v"/>
+      <outfile xil_pn:name="LogicReset_VTF.v"/>
       <outfile xil_pn:name="MixColumns.v"/>
       <outfile xil_pn:name="MixColumns_VTF.v"/>
       <outfile xil_pn:name="Mux.v"/>
@@ -119,25 +123,21 @@
       <outfile xil_pn:name="StateMachine_VTF.v"/>
       <outfile xil_pn:name="SubBytes.v"/>
       <outfile xil_pn:name="SubBytes_VTF.v"/>
-      <outfile xil_pn:name="Top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1623097516" xil_pn:in_ck="895798796322452710" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5085282582563718483" xil_pn:start_ts="1623097510">
+    <transform xil_pn:end_ts="1623100434" xil_pn:in_ck="33117423959929546" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-3653981069696459539" xil_pn:start_ts="1623100430">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <outfile xil_pn:name="SubBytes_VTF_beh.prj"/>
-      <outfile xil_pn:name="SubBytes_VTF_isim_beh.exe"/>
+      <outfile xil_pn:name="LogicReset_VTF_beh.prj"/>
+      <outfile xil_pn:name="LogicReset_VTF_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1623097516" xil_pn:in_ck="6889893045311032611" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7818507238052128720" xil_pn:start_ts="1623097516">
+    <transform xil_pn:end_ts="1623100434" xil_pn:in_ck="7016965513722673059" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6717321580935549392" xil_pn:start_ts="1623100434">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="SubBytes_VTF_isim_beh.wdb"/>
+      <outfile xil_pn:name="LogicReset_VTF_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
