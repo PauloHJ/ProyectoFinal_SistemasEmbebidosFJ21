@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "L:/Escuela/Profesional/Semestre 10/Sistemas Embebidos/PF_AES/SubBytes_VTF_isim_beh.exe" -prj "L:/Escuela/Profesional/Semestre 10/Sistemas Embebidos/PF_AES/SubBytes_VTF_beh.prj" "work.SubBytes_VTF" "work.glbl" 
