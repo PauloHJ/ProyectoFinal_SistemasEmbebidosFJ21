@@ -1,6 +1,6 @@
-# Embedded Systems Final Project Semester (Feb - May 2021)
-# AES Machine
-The project consists of an encryption and decryption machine using the Advanced Encryption Standard (AES) known as Rinjdael. This project must be implemented in a **DIGILENT** family FPGA.
+# Yantio'
+
+Yantio' is the first project developed by the company Embedded System Solution, it consists of an encryption and decryption machine using the Advanced Encryption Standard (AES) known as Rinjdael. This project must be implemented in a **DIGILENT** family FPGA.
 
 ***WARNING*** 
 
