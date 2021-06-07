@@ -5,5 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1818" delta="unknown" >"L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/InvMixColumns_VTF.v" Line 63: Invalid size of integer constant literal
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1818" delta="unknown" >"L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/InvMixColumns_VTF.v" Line 74: Invalid size of integer constant literal
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1818" delta="unknown" >"L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/InvMixColumns_VTF.v" Line 84: Invalid size of integer constant literal
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1818" delta="unknown" >"L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/InvMixColumns_VTF.v" Line 95: Invalid size of integer constant literal
+</msg>
+
 </messages>
 

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+InvMixColumns instance_name (
+    .Mix_En(Mix_En), 
+    .Clk(Clk), 
+    .Text(Text), 
+    .Modified_Text(Modified_Text), 
+    .Mix_Ry(Mix_Ry)
+    );
+
+
