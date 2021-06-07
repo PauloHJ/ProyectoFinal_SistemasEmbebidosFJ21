@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:54:35 06/05/2021 
+// Create Date:    20:55:30 06/03/2021 
 // Design Name: 
 // Module Name:    InvMixColumns 
 // Project Name: 
@@ -32,7 +32,7 @@ module InvMixColumns(
    initial $readmemb("tabla9.data", rom9);
 
    reg [7:0] romE [0:255];
-   reg [7:0] romB [0:255]; 
+   reg [7:0] romB [0:255];
    reg [7:0] romD [0:255];
    reg [7:0] rom9 [0:255];
 
