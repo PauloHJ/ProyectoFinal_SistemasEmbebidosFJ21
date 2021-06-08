@@ -53,7 +53,7 @@ module AES_Decryptor(
 	 wire MixRy;
 	 wire [127:0] MixText;
 	 
-	 StateMachine C01
+	 StateMachineDecryptor C01
 	 (
 		.Rst(Rst),
 		.Clk(Clk),
@@ -66,8 +66,10 @@ module AES_Decryptor(
 		.SubEn(SubEn),
 		.ShiftEn(ShiftEn),
 		.MixEn(MixEn),
-		.ModuleRy(ModRy),
-
+		.AddRy(AddRy),
+		.SubRy(SubRy),
+		.ShiftRy(ShiftRy),
+		.MixRy(MixRy),
 		.Text(Text),
 		.ModifiedText(ModifiedText)
 	 );
@@ -78,8 +80,8 @@ module AES_Decryptor(
 		.En(AddEn),
 		.Clk(Clk),
 		.Key(Key),
-		.Text(Text),
 		.Ry(AddRy),
+		.Text(Text),
 		.ModifiedText(AddText)
 	 );
 	 

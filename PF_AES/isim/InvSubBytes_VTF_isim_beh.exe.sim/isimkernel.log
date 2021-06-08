@@ -1,0 +1,29 @@
+Command line:
+   InvSubBytes_VTF_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58215
+
+Mon Jun 07 19:24:59 2021
+
+
+ Elaboration Time: 0.40625 sec
+
+ Current Memory Usage: 5650.96 Meg
+
+ Total Signals          : 17
+ Total Nets             : 271
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 2657
+Total Line Count : 306
+
+ Total Simulation Time: 0.4375 sec
+
+ Current Memory Usage: 5650.96 Meg
+
+Mon Jun 07 19:25:32 2021
+

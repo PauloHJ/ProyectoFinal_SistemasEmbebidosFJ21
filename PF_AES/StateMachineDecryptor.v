@@ -30,43 +30,34 @@ module StateMachineDecryptor(
     output reg SubEn,
     output reg ShiftEn,
     output reg MixEn,
-    input ModuleRy,
+    input AddRy,
+	 input SubRy,
+	 input ShiftRy,
+	 input MixRy,
     output reg [127:0] Text,
     input [127:0] ModifiedText
     );
-	 
-	 
+
+
 	 localparam
 		AddRoundKey = 2'b00,
 		InvSubBytes = 2'b01,
 		InvShiftRows = 2'b10,
 		InvMixColumns = 2'b11;
-	 
+
 	 //	Embedded signals
 	 reg [3:0] Round;
 	 reg [1:0] pres_state;
 	 reg [1:0] next_state;
-	 reg done;
-	 
-	 
-	 initial
-	 begin
-		done=0;
-		Round=0;
-		pres_state = AddRoundKey;
-		Text = CT;
-		Ry=0;
-	 end
-	 
-	 
+
+
 	 always @(negedge Clk)
 	 begin
 		if (Rst)
 		begin
 			pres_state = AddRoundKey;
+			SelKey = 10;
 			Text = CT;
-			//Round = 0;
-			//done = 0;
 		end
 		else if (En)
 		begin
@@ -75,38 +66,57 @@ module StateMachineDecryptor(
 			Text = ModifiedText;
 		end
 	end
-	
-	
-	
-	 always @(ModuleRy or pres_state or Round)
+
+
+
+	 always @(negedge Clk)
 	 begin
-		if(ModuleRy)
+		if (Rst)
 		begin
-			if (Round < 10)
-			begin
-				if (pres_state ==AddRoundKey)
-				begin
-					Round=Round+1;
+			Round=10;
+			next_state = AddRoundKey;
+			PT=0;
+			Ry=0;
+		end
+		else
+		begin
+			case (pres_state)
+				InvShiftRows : begin
+					if (ShiftRy) next_state = InvSubBytes;
 				end
-				case (pres_state)
-					AddRoundKey : next_state = InvSubBytes;
-					InvSubBytes : next_state = InvShiftRows;
-					InvShiftRows : next_state = InvMixColumns;
-					InvMixColumns : next_state = AddRoundKey;			
-				endcase 
-			end
-			else
-			begin
-				case (pres_state)
-					InvSubBytes : next_state = InvShiftRows;
-					InvShiftRows : next_state = AddRoundKey;
-					AddRoundKey : done = 1;
-					default : done = 0;
-				endcase
-			end
+				InvSubBytes : begin
+					if (SubRy) next_state = AddRoundKey;
+				end
+				AddRoundKey : begin 
+					if (AddRy)
+					begin
+						if(Round == 10)
+						begin
+							next_state = InvShiftRows;
+							Round = Round - 1;
+						end
+						else if(Round > 0)
+						begin
+							next_state = InvMixColumns;
+						end
+						else
+						begin
+							PT=ModifiedText;
+							Ry=1;
+						end
+					end
+				end
+				InvMixColumns : begin
+					if(MixRy)
+					begin
+						Round = Round - 1;
+						next_state = InvShiftRows;
+					end
+				end
+			endcase
 		end
 	 end
-	 
+
 	 always @(pres_state)// Turn on/off modules
 	 begin
 		case (pres_state)
@@ -117,15 +127,31 @@ module StateMachineDecryptor(
 		endcase
 	 end
 	 
-	 always @(posedge Clk)
-	 begin
-		if (done)
-		begin
-			PT=ModifiedText;
-			Ry=1;
-		end
-	 end
-	 
-
-
 endmodule
+
+
+//	always
+//	begin
+//	  #10 Clk = ~Clk; #10 Clk = ~Clk;
+//	end;
+//
+//	initial begin
+//		// Initialize Inputs
+//		Rst = 0;
+//		Clk = 0;
+//		En = 0;
+//		CT = 0;
+//		ModuleRy = 0;
+//		ModifiedText = 0;
+//
+//		// Wait 100 ns for global reset to finish
+//		#100;
+//        
+//		// Add stimulus here
+//		Rst = 1; #20; Rst = 0; #20; 
+//		En = 1;
+//	
+//		#200;
+//		ModuleRy = 1;
+//
+//	end
