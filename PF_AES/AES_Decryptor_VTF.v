@@ -96,13 +96,14 @@ module AES_Decryptor_VTF;
 		#100;
         
 		// Add stimulus here
+		CT = 128'h328831e0435a3137f6309807a88da234; #20;
 		Rst = 1'b1;
 		#100
 		;Rst = 1'b0;
 		#100;
-		CT = 128'h328831e0435a3137f6309807a88da234; #20;
 		En = 1'b1;
-		#500;
+		
+		#20500;
 		if (PT ==128'hcb1d0d0c1359113838c1f6ce9cd5b97f)
 			begin
 			$display("***PassKey***");
@@ -112,6 +113,27 @@ module AES_Decryptor_VTF;
 			$display("***ERROR0: PT = %h and must be  hcb1d0d0c1359113838c1f6ce9cd5b97f***",PT);
 			end
 		
+		
+		
+		
+//				// Add stimulus here
+//		CT = 128'h3902dc1925dc116a8409850b1dfd9732; #20;
+//		Rst = 1'b1;
+//		#100
+//		;Rst = 1'b0;
+//		#100;
+//		En = 1'b1;
+//		
+////		
+//		#500;
+//		if (PT ==128'hcb1d0d0c1359113838c1f6ce9cd5b97f)
+//			begin
+//			$display("***PassKey***");
+//			end
+//		else
+//			begin
+//			$display("***ERROR0: PT = %h and must be  hcb1d0d0c1359113838c1f6ce9cd5b97f***",PT);
+//			end
 	end
       
 endmodule

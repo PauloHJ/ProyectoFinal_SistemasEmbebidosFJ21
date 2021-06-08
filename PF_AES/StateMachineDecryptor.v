@@ -35,39 +35,42 @@ module StateMachineDecryptor(
 	 input ShiftRy,
 	 input MixRy,
     output reg [127:0] Text,
-    input [127:0] ModifiedText
+	 input [127:0] MixText,
+	 input [127:0] ShiftText,
+	 input [127:0] SubText,
+	 input [127:0] AddText
     );
 
 
 	 localparam
-		AddRoundKey = 2'b00,
-		InvSubBytes = 2'b01,
-		InvShiftRows = 2'b10,
-		InvMixColumns = 2'b11;
+		AddRoundKey = 3'b000,
+		InvSubBytes = 3'b001,
+		InvShiftRows = 3'b010,
+		InvMixColumns = 3'b011,
+		FinishState = 3'b100,
+		HoldState = 3'b111;
 
 	 //	Embedded signals
 	 reg [3:0] Round;
-	 reg [1:0] pres_state;
-	 reg [1:0] next_state;
+	 reg [2:0] pres_state;
+	 reg [2:0] next_state;
 
 
 	 always @(negedge Clk)
 	 begin
 		if (Rst)
 		begin
-			pres_state = AddRoundKey;
+			pres_state = HoldState;
 			SelKey = 10;
-			Text = CT;
+			PT = CT;
 		end
 		else if (En)
 		begin
 			pres_state = next_state;
 			SelKey = Round;
-			Text = ModifiedText;
+			PT = Text;
 		end
 	end
-
-
 
 	 always @(negedge Clk)
 	 begin
@@ -75,21 +78,29 @@ module StateMachineDecryptor(
 		begin
 			Round=10;
 			next_state = AddRoundKey;
-			PT=0;
 			Ry=0;
+			Text = CT;
 		end
-		else
+		else if(En)
 		begin
 			case (pres_state)
 				InvShiftRows : begin
-					if (ShiftRy) next_state = InvSubBytes;
+					if (ShiftRy) begin
+						next_state = InvSubBytes;
+						Text = ShiftText;
+					end
 				end
 				InvSubBytes : begin
-					if (SubRy) next_state = AddRoundKey;
+					if (SubRy) begin
+						next_state = AddRoundKey;
+						Text = SubText;
+					end
 				end
 				AddRoundKey : begin 
 					if (AddRy)
 					begin
+						Text = AddText;
+						
 						if(Round == 10)
 						begin
 							next_state = InvShiftRows;
@@ -101,18 +112,23 @@ module StateMachineDecryptor(
 						end
 						else
 						begin
-							PT=ModifiedText;
-							Ry=1;
+							next_state = FinishState;
 						end
 					end
 				end
 				InvMixColumns : begin
 					if(MixRy)
 					begin
+						Text = MixText;
 						Round = Round - 1;
 						next_state = InvShiftRows;
 					end
 				end
+				FinishState: begin
+					Text = AddText;
+					Ry=1;
+				end
+				default: next_state = AddRoundKey; 
 			endcase
 		end
 	 end
@@ -120,6 +136,8 @@ module StateMachineDecryptor(
 	 always @(pres_state)// Turn on/off modules
 	 begin
 		case (pres_state)
+			FinishState :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
+			HoldState :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
 			AddRoundKey :   begin AddEn = 1; SubEn = 0; ShiftEn = 0; MixEn=0; end
 			InvSubBytes :   begin AddEn = 0; SubEn = 1; ShiftEn = 0; MixEn=0; end
 			InvShiftRows :  begin AddEn = 0; SubEn = 0; ShiftEn = 1; MixEn=0; end

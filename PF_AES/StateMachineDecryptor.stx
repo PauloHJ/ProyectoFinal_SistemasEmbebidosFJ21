@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: StateMachineDecryptor.prj
 
@@ -43,8 +43,8 @@ Analyzing Verilog file "L:\ProyectoFinal_SistemasEmbebidosFJ21\PF_AES\StateMachi
 Parsing module <StateMachineDecryptor>.
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.90 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.69 secs
  
 --> 
 

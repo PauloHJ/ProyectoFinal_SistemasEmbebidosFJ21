@@ -2,14 +2,14 @@ Command line:
    StateMachineDecryptor_VTF_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  58598
+     -socket  59640
 
-Mon Jun 07 20:11:46 2021
+Mon Jun 07 21:36:24 2021
 
 
- Elaboration Time: 0.21875 sec
+ Elaboration Time: 0.3125 sec
 
- Current Memory Usage: 5807.21 Meg
+ Current Memory Usage: 5807.19 Meg
 
  Total Signals          : 30
  Total Nets             : 541
@@ -17,13 +17,13 @@ Mon Jun 07 20:11:46 2021
  Total Blocks           : 3
  Total Primitive Blocks : 2
  Total Processes        : 28
- Total Traceable Variables  : 42
- Total Scalar Nets and Variables : 1165
-Total Line Count : 123
+ Total Traceable Variables  : 43
+ Total Scalar Nets and Variables : 1174
+Total Line Count : 126
 
- Total Simulation Time: 1.85938 sec
+ Total Simulation Time: 0.375 sec
 
- Current Memory Usage: 4706.21 Meg
+ Current Memory Usage: 5807.19 Meg
 
-Mon Jun 07 20:14:15 2021
+Mon Jun 07 21:36:54 2021
 
