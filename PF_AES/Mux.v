@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:55:07 06/05/2021 
+// Create Date:    14:07:57 06/05/2021 
 // Design Name: 
 // Module Name:    Mux 
 // Project Name: 
@@ -19,38 +19,35 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Mux(
-    input Rst,
-    input Clk,
-    input [127:0] ARK_res,
-    input [127:0] SBT_res,
-    input [127:0] SHR_res,
-    input [127:0] MXC_res,
-    input [3:0] res_sel,
-    output reg [127:0] res
+    input MixRy,
+    input ShiftRy,
+    input SubRy,
+    input AddRy,
+    output reg Ry,
+    input [127:0] MixText,
+    input [127:0] ShiftText,
+    input [127:0] SubText,
+    input [127:0] AddText,
+    output reg [127:0] Text
     );
+	 
+	 wire [3:0] signals;
+	 assign signals = {MixRy,ShiftRy, SubRy, AddRy};
+	 
+	 always @(*)
+	 begin
+		case (signals)
+			4'b0000 : Ry = 0;
+			4'b0001 : begin Ry = 1; Text = AddText; end
+			4'b0010 : begin Ry = 1; Text = SubText; end
+			4'b0100 : begin Ry = 1; Text = ShiftText; end
+			4'b1000 : begin Ry = 1; Text = MixRy; end
+			default : Ry = 0;
+		endcase
+	 end
+	 
+	 
+	 
 
-	reg res_aux;
-	
-   always @(posedge Clk)
-	begin
-		if(Rst)
-			begin
-				res_aux = 0; 
-			end
-		else
-			begin
-				case (res_sel)
-					  4'b1000: res_aux = ARK_res;
-					  4'b0100: res_aux = SBT_res;
-					  4'b0010: res_aux = SHR_res;
-					  4'b0001: res_aux = MXC_res;
-					default: res_aux = 0;
-				endcase
-			end
-	end
-	always @(posedge Clk)
-		begin
-			res = res_aux;
-		end
-	
+
 endmodule

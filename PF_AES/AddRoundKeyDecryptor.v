@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:59:29 06/05/2021 
+// Create Date:    16:46:01 06/04/2021 
 // Design Name: 
-// Module Name:    AddRoundKeyDecryptor 
+// Module Name:    AddRoundKey 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 

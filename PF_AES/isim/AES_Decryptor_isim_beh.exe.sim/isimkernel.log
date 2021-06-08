@@ -1,0 +1,29 @@
+Command line:
+   AES_Decryptor_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  60083
+
+Mon Jun 07 22:33:37 2021
+
+
+ Elaboration Time: 1 sec
+
+ Current Memory Usage: 5826.68 Meg
+
+ Total Signals          : 59
+ Total Nets             : 1309
+ Total Signal Drivers   : 21
+ Total Blocks           : 7
+ Total Primitive Blocks : 6
+ Total Processes        : 35
+ Total Traceable Variables  : 62
+ Total Scalar Nets and Variables : 12886
+Total Line Count : 404
+
+ Total Simulation Time: 1.01563 sec
+
+ Current Memory Usage: 5826.68 Meg
+
+Mon Jun 07 22:33:44 2021
+

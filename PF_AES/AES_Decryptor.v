@@ -32,9 +32,9 @@ module AES_Decryptor(
 	 //	Embedded Signals
 	 wire [127:0] Text;
 	 wire [127:0] ModifiedText;
-	 wire AddRy;
 	 
 	 // AddRoundKey
+	 wire AddRy;
 	 wire AddEn;
 	 wire [127:0] CurrentKey;
 	 wire [127:0] AddText;
@@ -66,10 +66,16 @@ module AES_Decryptor(
 		.SubEn(SubEn),
 		.ShiftEn(ShiftEn),
 		.MixEn(MixEn),
-		.ModuleRy(ModRy),
-
+		.AddRy(AddRy),
+		.SubRy(SubRy),
+		.ShiftRy(ShiftRy),
+		.MixRy(MixRy),
 		.Text(Text),
-		.ModifiedText(ModifiedText)
+		.MixText(MixText),
+		.ShiftText(ShiftText),
+		.SubText(SubText),
+		.AddText(AddText)
+		//.ModifiedText(ModifiedText)
 	 );
 	 
 	 
@@ -78,8 +84,8 @@ module AES_Decryptor(
 		.En(AddEn),
 		.Clk(Clk),
 		.Key(Key),
-		.Text(Text),
 		.Ry(AddRy),
+		.Text(Text),
 		.ModifiedText(AddText)
 	 );
 	 
@@ -107,20 +113,5 @@ module AES_Decryptor(
 		.Modified_Text(MixText),
 		.Mix_Ry(MixRy)
 	 );
-	 
-		 MuxDecryptor		 C06
-	 (
-		.MixRy(MixRy),
-		.ShiftRy(ShiftRy),
-		.SubRy(SubRy),
-		.AddRy(AddRy),
-		.Ry(ModRy),
-		.MixText(MixText),
-		.ShiftText(ShiftText),
-		.SubText(SubText),
-		.AddText(AddText),
-		.Text(ModifiedText)
-	 );
-
 
 endmodule
