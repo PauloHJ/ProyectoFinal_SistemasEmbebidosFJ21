@@ -30,4 +30,15 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 ## Project Execution (Basic)
 ## License and credits
 
+The Design Software and the Nexys 3 FPGA board was development by [Xilink Company](https://www.xilinx.com/) and [Digilent Company](https://store.digilentinc.com/)
+
+The Proyect were development by the students of the Embedded Systems Class Period February - June 2021 of the Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) Campus Queretaro.
+  
+The manuals of the borad provided are owned by [Xilink Company](https://www.xilinx.com/) and [Digilent Company](https://store.digilentinc.com/)
+  
+The development and creation of this project is exclusively academic, so the use of this is only to disseminate the possible applications of Verilog in a field-programmable gate array (FPGA).
+
+OUR PURPOSE IS NOT FOR PROFIT
+ 
+In case of making use of this program, please give credit to the developers of the project.
 
