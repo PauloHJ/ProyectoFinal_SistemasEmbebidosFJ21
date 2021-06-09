@@ -26,7 +26,7 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 <p align = "center">
 <img src="https://user-images.githubusercontent.com/33244949/121391367-e7799a80-c913-11eb-9035-3452a47f5bba.jpg" width="250" height="250" />
 
-##Installation
+## Installation
 ## Features
 ## Project Execution (Basic)
 ## License and credits
