@@ -12,7 +12,6 @@ The development of this project is only available for use in an FPGA Nexys 3.
 
 - Requirements
 - Features
-- Installation
 - Project Execution (Basic)
 - Contributing
 - Supporting
@@ -26,7 +25,6 @@ Installation instructions and .exe are available on the official Xilink website.
 Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://reference.digilentinc.com/programmable-logic/nexys-3/start)
 
 ## Features
-## Installation
 ## Project Execution (Basic)
 ## Contributing
 ## Supporting
