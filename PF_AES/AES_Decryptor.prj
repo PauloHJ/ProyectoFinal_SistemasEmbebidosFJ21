@@ -1,6 +1,0 @@
-verilog work "StateMachineDecryptor.v"
-verilog work "InvSubBytes.v"
-verilog work "InvShiftRows.v"
-verilog work "InvMixColumns.v"
-verilog work "AddRoundKeyDecryptor.v"
-verilog work "AES_Decryptor.v"

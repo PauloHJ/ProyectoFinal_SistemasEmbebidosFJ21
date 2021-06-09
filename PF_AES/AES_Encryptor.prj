@@ -1,7 +1,0 @@
-verilog work "SubBytes.v"
-verilog work "StateMachine.v"
-verilog work "ShiftRows.v"
-verilog work "Mux.v"
-verilog work "MixColumns.v"
-verilog work "AddRoundKey.v"
-verilog work "AES_Encryptor.v"

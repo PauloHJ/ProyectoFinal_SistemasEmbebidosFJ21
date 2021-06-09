@@ -1,6 +1,0 @@
-vhdtdtfi -lib work D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.v -lang verilog -prj PF_AES -o Key_Scheduler.spl -module Key_Scheduler -template D:/Programas/ISEXilins/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 Key_Scheduler.spl D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.sym 
-vhdtdtfi -lib work D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.v -lang verilog -prj PF_AES -o Key_Scheduler.spl -module Key_Scheduler -template D:/Programas/ISEXilins/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 Key_Scheduler.spl D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.sym 
-vhdtdtfi -lib work D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.v -lang verilog -prj PF_AES -o Key_Scheduler.spl -module Key_Scheduler -template D:/Programas/ISEXilins/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 Key_Scheduler.spl D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Scheduler.sym 

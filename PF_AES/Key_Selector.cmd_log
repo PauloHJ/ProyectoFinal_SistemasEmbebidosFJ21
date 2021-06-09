@@ -1,2 +1,0 @@
-vhdtdtfi -lib work D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Selector.v -lang verilog -prj PF_AES -o Key_Selector.spl -module Key_Selector -template D:/Programas/ISEXilins/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan6 Key_Selector.spl D:/Alexis/sistemasendebidos2/Proyects/PF_AES/Key_Selector.sym 
