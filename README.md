@@ -13,7 +13,6 @@ The development of this project is only available for use in an FPGA Nexys 3.
 - [Requirements](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#content)
 - [Features](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#features)
 - [Project Execution (Basic)](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#project-execution-basic)
-- [Supporting](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#supporting)
 - [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
 
 ## Requirements
@@ -29,7 +28,6 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 
 ## Features
 ## Project Execution (Basic)
-## Supporting
 ## License and credits
 
 
