@@ -11,7 +11,7 @@ The development of this project is only available for use in an FPGA Nexys 3.
 ## Content
 
 - Requirements
-- Features
+- [Features](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#features)
 - Project Execution (Basic)
 - Supporting
 - License and credits
