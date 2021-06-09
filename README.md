@@ -13,7 +13,6 @@ The development of this project is only available for use in an FPGA Nexys 3.
 - Requirements
 - Features
 - Project Execution (Basic)
-- Contributing
 - Supporting
 - License and credits
 
@@ -26,7 +25,6 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 
 ## Features
 ## Project Execution (Basic)
-## Contributing
 ## Supporting
 ## License and credits
 
