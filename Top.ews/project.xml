@@ -1,0 +1,47 @@
+<CONFIGURATION>
+  <sections>
+    <section name="FileEncoding">
+      <key type="string" name="InternalEncoding" value="ISO-Latin1"/>
+      <key type="string" name="ExternalEncoding" value="ISO-Latin1"/>
+    </section>
+    <section name="Browser">
+      <key type="string" name="DetailView" value="design.Serial"/>
+    </section>
+    <section name="DiagramGridVisible">
+      <key type="bool" name="libca310b10acf6da068ad4447dc8f1cf76_diagca310b102197da068ad4447d7842cf76" value="true"/>
+    </section>
+    <section name="Markers">
+      <key type="string" name="CurrentPath" value="design:Toplevel:&lt;Internal>/libca310b10acf6da068ad4447dc8f1cf76_compca310b10f0a7da068ad4447d5a62cf76"/>
+      <key type="string" name="HdlOutputObject" value="libca310b10acf6da068ad4447dc8f1cf76_entca310b102197da068ad4447d6842cf76"/>
+    </section>
+    <section name="HTML">
+      <key type="bool" name="StartBrowser" value="false"/>
+    </section>
+    <section name="ObjectSearch">
+      <key type="string" name="TypeName" value="Any"/>
+      <key type="bool" name="CaseSensitive" value="false"/>
+      <key type="bool" name="WholeWord" value="false"/>
+    </section>
+    <section name="DatabaseView">
+      <key type="int" name="offset_x" value="0"/>
+      <key type="int" name="offset_y" value="0"/>
+    </section>
+    <section name="FileView">
+      <key type="int" name="offset_x" value="0"/>
+      <key type="int" name="offset_y" value="0"/>
+    </section>
+    <section name="HierarchicalView">
+      <key type="int" name="offset_x" value="0"/>
+      <key type="int" name="offset_y" value="0"/>
+    </section>
+    <section name="GenerationStamps">
+      <key type="string" name="libca310b10acf6da068ad4447dc8f1cf76_archca310b102197da068ad4447d9842cf76" value="1623099518"/>
+    </section>
+    <section name="GeneratedHdlFiles">
+      <key type="string" name="libca310b10acf6da068ad4447dc8f1cf76_archca310b102197da068ad4447d9842cf76" value="L:/Escuela/Profesional/Semestre 10/Sistemas Embebidos/Top.ews/design.hdl/Top.v"/>
+    </section>
+    <section name="GenerationChecksums">
+      <key type="string" name="L:/Escuela/Profesional/Semestre 10/Sistemas Embebidos/Top.ews/design.hdl/Top.v" value="83B297598ACE4BF6"/>
+    </section>
+  </sections>
+</CONFIGURATION>

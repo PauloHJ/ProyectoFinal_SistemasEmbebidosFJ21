@@ -1,3 +1,7 @@
+.idea
+*.tmp
+
+
 # intermediate build files
 *.bgn
 *.bit

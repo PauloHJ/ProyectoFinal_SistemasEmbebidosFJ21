@@ -8,3 +8,4 @@ The development of this project is only available for use in an FPGA Nexys 3.
 
 ## Content
 
+This is the monorepo of Yantio', it contains the verilog project, the ease diagram, and the main documentation 

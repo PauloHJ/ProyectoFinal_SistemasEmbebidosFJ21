@@ -1,0 +1,129 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "ent0c8a0110f228eb06ce65447d0c10c406")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Mon Jun 07 15:39:05 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "LogicReset")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 576 704)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1623097903 "Mon Jun 07 15:31:43 2021")
+      (MODIFIED 1623098345 "Mon Jun 07 15:39:05 2021")
+    )
+    (PORT
+      (OBID "eprt0c8a0110e428eb06ce65447d4d10c406")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Rst")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY -40 600 40 680)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 640)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "Rst")
+      )
+    )
+    (PORT
+      (OBID "eprt0c8a01108528eb06ce65447dcd10c406")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "ReadyKey")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 88 -40 168 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 128 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "ReadyKey")
+      )
+    )
+    (PORT
+      (OBID "eprt0c8a01102728eb06ce65447dde10c406")
+      (HDL_IDENT
+        (NAME "RstKey")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 536 344 616 424)
+      (SIDE 1)
+      (LABEL
+        (POSITION 520 396)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 1)
+        (ALIGNMENT 5)
+        (FORMAT 3)
+        (TEXT "RstKey")
+      )
+    )
+    (ARCH_DECLARATION 2 "arch0c8a0110f228eb06ce65447d2c10c406" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "arch0c8a0110f228eb06ce65447d2c10c406")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "file0c8a0110f228eb06ce65447d4c10c406")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'LogicReset'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module LogicReset (Rst, ReadyKey, RstKey) ;"
+               "  input      Rst;"
+               "  input      ReadyKey;"
+               "  output     RstKey;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // LogicReset"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

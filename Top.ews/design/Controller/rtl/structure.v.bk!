@@ -1,0 +1,26 @@
+// EASE/HDL begin //////////////////////////////////////////////////////////////
+// 
+// module 'Controller'.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module Controller (SerialEn, EncEn, DecEn, KeyEn, SerialRy, EncRy, KeyRy, DecRy, 
+  Clk, Rst, SerialWriteEn) ;
+  output     SerialEn;
+  output     EncEn;
+  output     DecEn;
+  output     KeyEn;
+  input      SerialRy;
+  input      EncRy;
+  input      KeyRy;
+  input      DecRy;
+  input      Clk;
+  input      Rst;
+  output     SerialWriteEn;
+
+
+// EASE/HDL end ////////////////////////////////////////////////////////////////
+
+
+
+endmodule // Controller

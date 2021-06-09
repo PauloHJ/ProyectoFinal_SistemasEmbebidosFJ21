@@ -1,0 +1,238 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca310b107ac7da068ad4447d42b2cf76")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Mon Jun 07 15:43:04 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "Key_Scheduler")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 768 1792)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1621982375 "Tue May 25 17:39:35 2021")
+      (MODIFIED 1623098447 "Mon Jun 07 15:40:47 2021")
+    )
+    (PORT
+      (OBID "eprtca310b109bc7da068ad4447d43b2cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Clk")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY -40 152 40 232)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 192)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "Clk")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10cbc7da068ad4447da3b2cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Rst")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY -40 728 40 808)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 768)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "Rst")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b101cc7da068ad4447d04b2cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "En")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 280 1752 360 1832)
+      (SIDE 2)
+      (LABEL
+        (POSITION 320 1728)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "En")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b106cc7da068ad4447d64b2cf76")
+      (HDL_IDENT
+        (NAME "Ry")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 408 1752 488 1832)
+      (SIDE 2)
+      (LABEL
+        (POSITION 448 1728)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Ry")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10bdc7da068ad4447dc4b2cf76")
+      (HDL_IDENT
+        (NAME "Key")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY 664 -40 744 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 704 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "Key[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010b01f0b064e80447dcb221970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "SelKey")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "3" "0")
+          )
+        )
+      )
+      (GEOMETRY 728 920 808 1000)
+      (SIDE 1)
+      (LABEL
+        (POSITION 704 960)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 1)
+        (ALIGNMENT 5)
+        (FORMAT 3)
+        (TEXT "SelKey[3:0]")
+      )
+    )
+    (PORT
+      (OBID "eprt0c8a01106e18eb06ce65447de910c406")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "KeySeed")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY 536 -40 616 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 576 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "KeySeed[127:0]")
+      )
+    )
+    (ARCH_DECLARATION 2 "archca310b107ac7da068ad4447d62b2cf76" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca310b107ac7da068ad4447d62b2cf76")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca310b107ac7da068ad4447d82b2cf76")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'Key_Scheduler'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module Key_Scheduler (Clk, Rst, En, Ry, Key, SelKey, KeySeed) ;"
+               "  input      Clk;"
+               "  input      Rst;"
+               "  input      En;"
+               "  output     Ry;"
+               "  output     [127:0]Key;"
+               "  input      [3:0]SelKey;"
+               "  input      [127:0]KeySeed;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // Key_Scheduler"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

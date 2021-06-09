@@ -1,0 +1,413 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca310b104007da068ad4447d8af1cf76")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Mon Jun 07 15:39:31 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "Controller")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 6848 896)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1621979140 "Tue May 25 16:45:40 2021")
+      (MODIFIED 1623098366 "Mon Jun 07 15:39:26 2021")
+    )
+    (PORT
+      (OBID "eprtca310b102d47da068ad4447d2602cf76")
+      (HDL_IDENT
+        (NAME "SeriaReadlEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 600 -40 680 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 640 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SeriaReadlEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10cd47da068ad4447d6602cf76")
+      (HDL_IDENT
+        (NAME "EncEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 2968 -40 3048 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 3008 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "EncEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b102e47da068ad4447da602cf76")
+      (HDL_IDENT
+        (NAME "DecEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 5528 -40 5608 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 5568 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "DecEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b101f47da068ad4447de602cf76")
+      (HDL_IDENT
+        (NAME "KeyEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 3672 -40 3752 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 3712 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "KeyEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b103057da068ad4447d2702cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "SeriaWriteRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 728 -40 808 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 768 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SeriaWriteRy")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10a057da068ad4447d6702cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "EncRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 3096 -40 3176 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 3136 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "EncRy")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b100157da068ad4447da702cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "KeyRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 3800 -40 3880 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 3840 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "KeyRy")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b102257da068ad4447de702cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "DecRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 5656 -40 5736 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 5696 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "DecRy")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10a457da068ad4447d2802cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Clk")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 216 -40 296 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 256 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "Clk")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10d457da068ad4447d6802cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Rst")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 344 -40 424 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 384 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "Rst")
+      )
+    )
+    (PORT
+      (OBID "eprtca9100108f6e0b064e80447df8a11970")
+      (HDL_IDENT
+        (NAME "SerialWriteEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 472 -40 552 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 512 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SerialWriteEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca9100107eee0b064e80447d07021970")
+      (HDL_IDENT
+        (NAME "OutEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 6488 -40 6568 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 6528 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "OutEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010afee0b064e80447d67021970")
+      (HDL_IDENT
+        (NAME "OutRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 6616 -40 6696 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 6656 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "OutRy")
+      )
+    )
+    (PORT
+      (OBID "eprtca91001095701b064e80447d5dd21970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "SerialReadRy")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 856 -40 936 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 896 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SerialReadRy")
+      )
+    )
+    (PORT
+      (OBID "eprt0c8a01109918eb06ce65447d7710c406")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "ProgramSelector")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 2328 -40 2408 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 2368 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "ProgramSelector")
+      )
+    )
+    (ARCH_DECLARATION 2 "archca310b104007da068ad4447dcaf1cf76" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca310b104007da068ad4447dcaf1cf76")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca310b104007da068ad4447ddaf1cf76")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'Controller'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module Controller (SeriaReadlEn, EncEn, DecEn, KeyEn, SeriaWriteRy, EncRy, "
+               "  KeyRy, DecRy, Clk, Rst, SerialWriteEn, OutEn, OutRy, SerialReadRy, "
+               "  ProgramSelector) ;"
+               "  output     SeriaReadlEn;"
+               "  output     EncEn;"
+               "  output     DecEn;"
+               "  output     KeyEn;"
+               "  input      SeriaWriteRy;"
+               "  input      EncRy;"
+               "  input      KeyRy;"
+               "  input      DecRy;"
+               "  input      Clk;"
+               "  input      Rst;"
+               "  output     SerialWriteEn;"
+               "  output     OutEn;"
+               "  input      OutRy;"
+               "  input      SerialReadRy;"
+               "  input      ProgramSelector;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // Controller"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

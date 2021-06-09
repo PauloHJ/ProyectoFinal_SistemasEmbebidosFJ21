@@ -1,0 +1,191 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca9100106a1f0b064e80447d2a321970")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Fri May 28 08:44:22 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "Key_Selector")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 768 1728)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1622208934 "Fri May 28 08:35:34 2021")
+      (MODIFIED 1622209462 "Fri May 28 08:44:22 2021")
+    )
+    (PORT
+      (OBID "eprtca9100106d1f0b064e80447d2b321970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "SelKeyEnc")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "3" "0")
+          )
+        )
+      )
+      (GEOMETRY 88 -40 168 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 128 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SelKeyEnc[3:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010ae1f0b064e80447d8b321970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "SelKeyDec")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "3" "0")
+          )
+        )
+      )
+      (GEOMETRY 600 -40 680 40)
+      (SIDE 0)
+      (LABEL
+        (POSITION 640 64)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 0)
+        (ALIGNMENT 1)
+        (FORMAT 3)
+        (TEXT "SelKeyDec[3:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010db2f0b064e80447de7621970")
+      (HDL_IDENT
+        (NAME "SelKey")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "3" "0")
+          )
+        )
+      )
+      (GEOMETRY -40 856 40 936)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 896)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "SelKey[3:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010753f0b064e80447d6cb21970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "EncEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 88 1688 168 1768)
+      (SIDE 2)
+      (LABEL
+        (POSITION 128 1664)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "EncEn")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010463f0b064e80447dccb21970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "DecEn")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 600 1688 680 1768)
+      (SIDE 2)
+      (LABEL
+        (POSITION 640 1664)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "DecEn")
+      )
+    )
+    (ARCH_DECLARATION 2 "archca9100106a1f0b064e80447d4a321970" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca9100106a1f0b064e80447d4a321970")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca9100107a1f0b064e80447d6a321970")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'Key_Selector'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module Key_Selector (SelKeyEnc, SelKeyDec, SelKey, EncEn, DecEn) ;"
+               "  input      [3:0]SelKeyEnc;"
+               "  input      [3:0]SelKeyDec;"
+               "  output     [3:0]SelKey;"
+               "  input      EncEn;"
+               "  input      DecEn;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // Key_Selector"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)
