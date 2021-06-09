@@ -1,0 +1,22 @@
+// EASE/HDL begin //////////////////////////////////////////////////////////////
+// 
+// module 'AES_Encryptor'.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module AES_Encryptor (PT, Clk, Rst, En, Ry, CT, Key, SelKey) ;
+  input      PT;
+  input      Clk;
+  input      Rst;
+  input      En;
+  output     Ry;
+  output     CT;
+  input      Key;
+  output     SelKey;
+
+
+// EASE/HDL end ////////////////////////////////////////////////////////////////
+
+
+
+endmodule // AES_Encryptor

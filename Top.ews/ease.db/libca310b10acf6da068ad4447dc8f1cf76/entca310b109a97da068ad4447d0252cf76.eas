@@ -1,0 +1,56 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca310b109a97da068ad4447d0252cf76")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Tue May 25 17:27:31 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "TopModule")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 256 256)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1621981609 "Tue May 25 17:26:49 2021")
+      (MODIFIED 1621981609 "Tue May 25 17:26:49 2021")
+    )
+    (ARCH_DECLARATION 2 "archca310b109a97da068ad4447d3252cf76" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca310b109a97da068ad4447d3252cf76")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca310b109a97da068ad4447d4252cf76")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'TopModule'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module TopModule ;"
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // TopModule"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

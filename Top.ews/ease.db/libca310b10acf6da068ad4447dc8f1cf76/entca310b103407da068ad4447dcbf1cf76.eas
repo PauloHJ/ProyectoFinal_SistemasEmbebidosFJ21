@@ -1,0 +1,235 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca310b103407da068ad4447dcbf1cf76")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Mon Jun 07 15:43:04 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "OutputSelector")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 768 2432)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1621979203 "Tue May 25 16:46:43 2021")
+      (MODIFIED 1623098554 "Mon Jun 07 15:42:34 2021")
+    )
+    (PORT
+      (OBID "eprtca310b10e217da068ad4447d2cf1cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Sel")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 536 2392 616 2472)
+      (SIDE 2)
+      (LABEL
+        (POSITION 576 2368)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Sel")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10bc27da068ad4447decf1cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "PT")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY -40 792 40 872)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 832)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "PT[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b109e27da068ad4447d2df1cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "CT")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY -40 280 40 360)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 320)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "CT[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b101747da068ad4447d6102cf76")
+      (HDL_IDENT
+        (NAME "Result")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY 664 2392 744 2472)
+      (SIDE 2)
+      (LABEL
+        (POSITION 704 2368)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Result[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca91001043fe0b064e80447df9021970")
+      (HDL_IDENT
+        (NAME "En")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 88 2392 168 2472)
+      (SIDE 2)
+      (LABEL
+        (POSITION 128 2368)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "En")
+      )
+    )
+    (PORT
+      (OBID "eprtca91001004fe0b064e80447d5a021970")
+      (HDL_IDENT
+        (NAME "Ry")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 216 2392 296 2472)
+      (SIDE 2)
+      (LABEL
+        (POSITION 256 2368)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Ry")
+      )
+    )
+    (PORT
+      (OBID "eprtca91001060ef0b064e80447d4bd21970")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Rst")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY -40 2008 40 2088)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 2048)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "Rst")
+      )
+    )
+    (ARCH_DECLARATION 2 "archca310b103407da068ad4447dfbf1cf76" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca310b103407da068ad4447dfbf1cf76")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca310b104407da068ad4447d0cf1cf76")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'OutputSelector'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module OutputSelector (Sel, PT, CT, Result, En, Ry, Rst) ;"
+               "  input      Sel;"
+               "  input      [127:0]PT;"
+               "  input      [127:0]CT;"
+               "  output     [127:0]Result;"
+               "  input      En;"
+               "  output     Ry;"
+               "  input      Rst;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // OutputSelector"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

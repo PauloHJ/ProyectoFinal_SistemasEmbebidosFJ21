@@ -1,0 +1,264 @@
+(DATABASE_VERSION 23)
+(ENTITY_FILE
+  (ENTITY
+    (OBID "entca310b105ff6da068ad4447d1af1cf76")
+    (PROPERTIES
+      (PROPERTY "STAMP_PLATFORM" "PC")
+      (PROPERTY "STAMP_REVISION" "Revision 4")
+      (PROPERTY "STAMP_TIME" "Mon Jun 07 15:39:05 2021")
+      (PROPERTY "STAMP_TOOL" "Ease")
+      (PROPERTY "STAMP_VERSION" "8.4")
+    )
+    (HDL_IDENT
+      (NAME "AES_Decryptor")
+      (USERNAME 1)
+    )
+    (GEOMETRY 0 0 1216 1088)
+    (SIDE 0)
+    (HDL 2)
+    (EXTERNAL 0)
+    (OBJSTAMP
+      (DESIGNER "00ant")
+      (CREATED 1621979125 "Tue May 25 16:45:25 2021")
+      (MODIFIED 1623098314 "Mon Jun 07 15:38:34 2021")
+    )
+    (PORT
+      (OBID "eprtca310b10e337da068ad4447daef1cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "CT")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY -40 216 40 296)
+      (SIDE 3)
+      (LABEL
+        (POSITION 64 256)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 3)
+        (ALIGNMENT 3)
+        (FORMAT 3)
+        (TEXT "CT[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b105e37da068ad4447de002cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Clk")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 344 1048 424 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 384 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Clk")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b103f37da068ad4447d2102cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Rst")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 472 1048 552 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 512 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Rst")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10bd57da068ad4447da902cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "En")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+        )
+      )
+      (GEOMETRY 984 1048 1064 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 1024 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "En")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b100067da068ad4447d8a02cf76")
+      (HDL_IDENT
+        (NAME "Ry")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+        )
+      )
+      (GEOMETRY 1112 1048 1192 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 1152 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Ry")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b10e287da068ad4447dd132cf76")
+      (PROPERTIES
+        (PROPERTY "SensitivityList" "Yes")
+      )
+      (HDL_IDENT
+        (NAME "Key")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 1)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY 216 1048 296 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 256 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "Key[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca310b1022d7da068ad4447d17b2cf76")
+      (HDL_IDENT
+        (NAME "PT")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "127" "0")
+          )
+        )
+      )
+      (GEOMETRY 1176 216 1256 296)
+      (SIDE 1)
+      (LABEL
+        (POSITION 1152 256)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 1)
+        (ALIGNMENT 5)
+        (FORMAT 3)
+        (TEXT "PT[127:0]")
+      )
+    )
+    (PORT
+      (OBID "eprtca910010174e0b064e80447df1a11970")
+      (HDL_IDENT
+        (NAME "SelKey")
+        (USERNAME 1)
+        (ATTRIBUTES
+          (MODE 2)
+          (CONSTRAINT
+            (DIRECTION 1)
+            (RANGE "3" "0")
+          )
+        )
+      )
+      (GEOMETRY 600 1048 680 1128)
+      (SIDE 2)
+      (LABEL
+        (POSITION 640 1024)
+        (SCALE 96)
+        (COLOR_LINE 0)
+        (SIDE 2)
+        (ALIGNMENT 7)
+        (FORMAT 3)
+        (TEXT "SelKey[3:0]")
+      )
+    )
+    (ARCH_DECLARATION 2 "archca310b105ff6da068ad4447d5af1cf76" "rtl")
+  )
+  (ARCH_DEFINITION
+    (OBID "archca310b105ff6da068ad4447d5af1cf76")
+    (HDL_IDENT
+      (NAME "rtl")
+      (USERNAME 1)
+    )
+    (TYPE 2)
+    (HDL_FILE
+      (VERILOG_FILE
+        (OBID "fileca310b105ff6da068ad4447d6af1cf76")
+        (NAME "structure.v")
+        (VALUE "// EASE/HDL begin //////////////////////////////////////////////////////////////"
+               "// "
+               "// module 'AES_Decryptor'."
+               "// "
+               "////////////////////////////////////////////////////////////////////////////////"
+               ""
+               "module AES_Decryptor (CT, Clk, Rst, En, Ry, Key, PT, SelKey) ;"
+               "  input      [127:0]CT;"
+               "  input      Clk;"
+               "  input      Rst;"
+               "  input      En;"
+               "  output     Ry;"
+               "  input      [127:0]Key;"
+               "  output     [127:0]PT;"
+               "  output     [3:0]SelKey;"
+               ""
+               ""
+               "// EASE/HDL end ////////////////////////////////////////////////////////////////"
+               ""
+               ""
+               ""
+               "endmodule // AES_Decryptor"
+               "")
+      )
+    )
+  )
+)
+(END_OF_FILE)

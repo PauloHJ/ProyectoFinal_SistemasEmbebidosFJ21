@@ -1,0 +1,21 @@
+// EASE/HDL begin //////////////////////////////////////////////////////////////
+// 
+// module 'OutputSelector'.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module OutputSelector (Sel, PT, CT, Result, En, Ry, Rst) ;
+  input      Sel;
+  input      [127:0]PT;
+  input      [127:0]CT;
+  output     [127:0]Result;
+  input      En;
+  output     Ry;
+  input      Rst;
+
+
+// EASE/HDL end ////////////////////////////////////////////////////////////////
+
+
+
+endmodule // OutputSelector

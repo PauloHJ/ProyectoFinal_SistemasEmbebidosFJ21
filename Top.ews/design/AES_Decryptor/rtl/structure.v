@@ -1,0 +1,22 @@
+// EASE/HDL begin //////////////////////////////////////////////////////////////
+// 
+// module 'AES_Decryptor'.
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+module AES_Decryptor (CT, Clk, Rst, En, Ry, Key, PT, SelKey) ;
+  input      [127:0]CT;
+  input      Clk;
+  input      Rst;
+  input      En;
+  output     Ry;
+  input      [127:0]Key;
+  output     [127:0]PT;
+  output     [3:0]SelKey;
+
+
+// EASE/HDL end ////////////////////////////////////////////////////////////////
+
+
+
+endmodule // AES_Decryptor

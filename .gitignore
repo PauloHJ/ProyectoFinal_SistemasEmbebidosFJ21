@@ -1,4 +1,5 @@
 .idea
+*.tmp
 
 
 # intermediate build files
