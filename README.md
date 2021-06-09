@@ -23,6 +23,10 @@ Installation instructions and .exe are available on the official Xilink website.
 
 Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://reference.digilentinc.com/programmable-logic/nexys-3/start)
 
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/33244949/121391367-e7799a80-c913-11eb-9035-3452a47f5bba.jpg" width="250" height="250" />
+
+
 ## Features
 ## Project Execution (Basic)
 ## Supporting
