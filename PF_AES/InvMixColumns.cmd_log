@@ -1,1 +1,0 @@
-vhdtdtfi -lang verilog -prj PF_AES -o L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES/InvMixColumns.tfi -lib work L:/ProyectoFinal_SistemasEmbebidosFJ21/PF_AES//InvMixColumns.v -module InvMixColumns -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,8 +1,0 @@
-verilog work "StateMachineDecryptor.v"
-verilog work "InvSubBytes.v"
-verilog work "InvShiftRows.v"
-verilog work "InvMixColumns.v"
-verilog work "AddRoundKeyDecryptor.v"
-verilog work "AES_Decryptor.v"
-verilog work "AES_Decryptor_VTF.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
