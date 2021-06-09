@@ -2,7 +2,7 @@
 
 Yantio' is the first project developed by the company Embedded System Solution, it consists of an encryption and decryption machine using the Advanced Encryption Standard (AES) known as Rinjdael. This project must be implemented in a **DIGILENT** family FPGA.
 
-This is the monorepo of Yantio', it contains the verilog project, the ease diagram, and the main documentation 
+This is the monorepo of Yantio', it contains the verilog project and the ease diagram
 
 ***WARNING*** 
 
@@ -28,7 +28,9 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 
 ## Installation
 ## Features
-## Project Execution (Basic)
+### Getting Started
+### Tutorials
+### Sample Projects
 ## License and credits
 
 The Design Software and the Nexys 3 FPGA board was development by [Xilink Company](https://www.xilinx.com/) and [Digilent Company](https://store.digilentinc.com/)
