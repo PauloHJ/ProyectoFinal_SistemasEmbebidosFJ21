@@ -20,7 +20,7 @@ The development of this project is only available for use in an FPGA Nexys 3.
 The user must have the [ISE WebPACK Design Software](https://www.xilinx.com/products/design-tools/ise-design-suite/ise-webpack.html) from Xilink installed. 
 Installation instructions and .exe are available on the official Xilink website.
 
-Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://reference.digilentinc.com/programmable-logic/nexys-3/start)
+Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://reference.digilentinc.com/programmable-logic/nexys-3/start) as the shown below.
 
 <p align = "center">
 <img src="https://user-images.githubusercontent.com/33244949/121391367-e7799a80-c913-11eb-9035-3452a47f5bba.jpg" width="250" height="250" />
