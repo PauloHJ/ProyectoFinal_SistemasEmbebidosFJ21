@@ -17,18 +17,30 @@
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
-//////////////////////////////////////////////////////////////////////////////////
+/*//////////////////////////////////////////////////////////////////////////////////
+
+module Key_Scheduler (Clk, Rst, En, Ry, Key, SelKey, KeySeed) ;
+      input      Clk;
+      input      Rst;
+      input      En;
+      output reg Ry;
+      output     [127:0]Key;
+      input      [3:0]SelKey;
+      input      [127:0]KeySeed;
+	 */
 module Key_Scheduler(
     input 				En,		//Enable
     input 	[3:0] 	SelKey, 	//Key request
 	 input 				Clk,		//Clock
 	 input 				Rst,		//Reset
     output  [127:0] 	Key, 		//Key Value
+	 input   [127:0]  KeySeed,   //Key reading from top
+	 input            RyK,      //Key Ready from top
     output reg			Ry			//End or ready
     );
 	 
-	 
-	 // Embedded signals
+
+// Embedded signals
 	 reg [7:0] 		expanded_key		[0:175];
 	 reg [7:0] 		Key_temp     		[0:15];
 		
@@ -46,38 +58,6 @@ module Key_Scheduler(
 	 
 	
 	initial begin
-/*		original_key[0] = 8'h2b;
-		original_key[1] = 8'h7e;
-		original_key[2] = 8'h15;
-		original_key[3] = 8'h16;
-		original_key[4] = 8'h28;
-		original_key[5] = 8'hae;
-		original_key[6] = 8'hd2;
-		original_key[7] = 8'ha6;
-		original_key[8] = 8'hab;
-		original_key[9] = 8'hf7;
-		original_key[10] = 8'h15;
-		original_key[11] = 8'h88;
-		original_key[12] = 8'h09;
-		original_key[13] = 8'hcf;
-		original_key[14] = 8'h4f;
-		original_key[15] = 8'h3c;*/
-		original_key[0] = 8'he6;
-		original_key[1] = 8'hc3;
-		original_key[2] = 8'hb3;
-		original_key[3] = 8'h3a;
-		original_key[4] = 8'hfa;
-		original_key[5] = 8'hec;
-		original_key[6] = 8'h1e;
-		original_key[7] = 8'ha1;
-		original_key[8] = 8'hd5;
-		original_key[9] = 8'hf6;
-		original_key[10] = 8'h5d;
-		original_key[11] = 8'h59;
-		original_key[12] = 8'ha0;
-		original_key[13] = 8'h81;
-		original_key[14] = 8'h8e;
-		original_key[15] = 8'h16;			
 		//SBox	
 		SBox[0] = 8'h63;
 		SBox[1] = 8'h7c;
@@ -377,21 +357,42 @@ module Key_Scheduler(
 
 	always @(posedge(Clk))
 	begin
-		if(Rst)
+		if(Rst || ~RyK)
 		begin
-			for (j = 0; j < 16; j = j + 1)
-				expanded_key[j] = original_key[j];
+			
 			Ry = 0;
 
 			//Intialize the expanded key with 0's
-			for (j = 16; j < 176; j = j + 1)
+			for (j = 0; j < 176; j = j + 1)
 				expanded_key[j] = 8'h00; 
 		end
-		else if(En)
+		else if(En && RyK)
 		begin
+			
+			//Make original key reading
+			original_key[0] =   KeySeed[127:120];
+			original_key[4] =   KeySeed[119:112];
+			original_key[8] =   KeySeed[111:104];
+			original_key[12] =  KeySeed[103:96];
+			original_key[1] =   KeySeed[95:88];
+			original_key[5] =   KeySeed[87:80];
+			original_key[9] =   KeySeed[79:72];
+			original_key[13] =  KeySeed[71:64];
+			original_key[2] =   KeySeed[63:56];
+			original_key[6] =   KeySeed[55:48];
+			original_key[10] =  KeySeed[47:40];
+			original_key[14] =  KeySeed[39:32];
+			original_key[3] =   KeySeed[31:24];
+			original_key[7] =   KeySeed[23:16];
+			original_key[11] =  KeySeed[15:8];
+			original_key[15] =  KeySeed[7:0];
+			
+			//Fill in first key with reading
+			for (j = 0; j < 16; j = j + 1)
+				expanded_key[j] = original_key[j];
+			
 			for (c = 16; c < 176; c = c + 16)
 				begin
-				
 				
 					expanded_key[c] = SBox[expanded_key[c-3]] ^ Rcon[c/16 - 1] ^ expanded_key[c-16];
 					expanded_key[c + 1] = SBox[expanded_key[c-2]] ^ expanded_key[c-15];

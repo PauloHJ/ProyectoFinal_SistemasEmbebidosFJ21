@@ -69,7 +69,7 @@ module StateMachineDecryptor_VTF;
 	always
 	begin
 	  #10 Clk = ~Clk; #10 Clk = ~Clk;
-	end;
+	end
 
 	initial begin
 		// Initialize Inputs

@@ -29,6 +29,8 @@ module Key_Scheduler_VTF;
 	reg [3:0] SelKey;
 	reg Clk;
 	reg Rst;
+	reg RyK;
+	reg [127:0] KeySeed;
 
 	// Outputs
 	wire [127:0] Key;
@@ -41,7 +43,9 @@ module Key_Scheduler_VTF;
 		.Clk(Clk), 
 		.Rst(Rst), 
 		.Key(Key), 
-		.Ry(Ry)
+		.Ry(Ry),
+		.RyK(RyK),
+		.KeySeed(KeySeed)
 	);
 
 	always
@@ -52,22 +56,23 @@ module Key_Scheduler_VTF;
 	
 	initial begin
 		// Initialize Inputs
-		
-		
 		Clk = 0;
 		Rst = 0;
 		En = 0;
 		SelKey = 0;
+		RyK = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
 		Rst = 1; #50;
+		KeySeed = 128'h2b28ab097eaef7cf15d2154f16a6883c;
+		RyK = 1;
 		Rst = 0; En = 1; #1500; SelKey = 4'b0000; #10;
 		
 		
-/*		//if original key is 2b28ab097eaef7cf15d2154f16a6883c
+		//if original key is 2b28ab097eaef7cf15d2154f16a6883c
 		SelKey = 4'b0000; #150;//key0
 		if (Key ==128'h2b28ab097eaef7cf15d2154f16a6883c) 
 			begin
@@ -168,10 +173,10 @@ module Key_Scheduler_VTF;
 		else 
 			begin
 			$display("***ERROR10: Key = %h and must be  d0c9e1b614ee3f63f9250c0ca889c8a6***",Key);
-			end */
+			end 
 			
 		//if original key is e6fad5a09c3ecf681b31e5d8e3aa15916
-		SelKey = 4'b0000; #150;//key0
+		/*SelKey = 4'b0000; #150;//key0
 		if (Key ==128'he6fad5a0c3ecf681b31e5d8e3aa15916) 
 			begin
 			$display("***PassKey0***");
@@ -278,7 +283,7 @@ module Key_Scheduler_VTF;
 			
 			
 
-
+   */
 	end
       
 endmodule

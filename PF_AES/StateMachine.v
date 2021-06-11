@@ -22,110 +22,143 @@ module StateMachine(
     input Rst,
     input Clk,
     input En,
-    input [127:0] CT,
-    output reg [3:0] SelKey,
-    output reg Ry,
-    output reg [127:0] PT,
-    output reg AddEn,
-    output reg SubEn,
-    output reg ShiftEn,
-    output reg MixEn,
-    input ModuleRy,
-    output reg [127:0] Text,
-    input [127:0] ModifiedText
+    input [127:0] PT,
+    output reg [127:0] CT,
+    output reg En_ARK,
+    output reg En_SBT,
+    output reg En_SHR,
+    output reg En_MXC,
+    output reg Rst_ARK,
+    output reg Rst_SBT,
+    output reg Rst_SHR,
+    output reg Rst_MXC,
+    input Ry_ARK,
+    input Ry_SBT,
+    input Ry_SHR,
+    input Ry_MXC,
+    output reg [127:0]  Text,
+    input [127:0] Text_ARK,
+    input [127:0] Text_SBT,
+    input [127:0] Text_SHR,
+    input [127:0] Text_MXC,
+    output reg [3:0]    KeySel,
+    output reg          Ry
     );
 
-
-	 localparam
-		AddRoundKey = 2'b00,
-		InvSubBytes = 2'b01,
-		InvShiftRows = 2'b10,
-		InvMixColumns = 2'b11;
-
-	 //	Embedded signals
-	 reg [3:0] Round;
-	 reg [1:0] pres_state;
-	 reg [1:0] next_state;
-	 reg done;
+    localparam
+        Begin     		= 3'b000,
+        AddRoundKey     = 3'b001,
+        SubBytes  		= 3'b010,
+        ShiftRows 		= 3'b011,
+        MixCols	 		= 3'b100,
+        End				= 4'b101;	// localparam ends here
 
 
-	 initial
-	 begin
-		done=0;
-		Round=11;
-		pres_state = AddRoundKey;
-		Text = CT;
-		Ry=0;
-	 end
+   reg  [3:0] Round;
+	reg  [2:0] pres_state;
 
 
-	 always @(negedge Clk)
-	 begin
-		if (Rst)
-		begin
-			pres_state = AddRoundKey;
-			Text = CT;
-			//Round = 0;
-			//done = 0;
+	// Finite State Machine Section (State Diagram)
+	always @(negedge Clk)
+	begin
+       if(Rst)
+       begin
+            Round       = 0;
+			KeySel      = 0;
+            pres_state  = Begin;
+            Ry          = 0;
+            Text        = PT;
+			CT          = PT;
 		end
-		else if (En)
+		else if(En)
 		begin
-			pres_state = next_state;
-			SelKey = Round;
-			Text = ModifiedText;
-		end
-	end
+            case(pres_state)
+					Begin: begin
+                    Rst_ARK = 1;
+                    pres_state = AddRoundKey;
+                end
+                AddRoundKey : begin
+                    if  (Ry_ARK) begin
+                        Text = Text_ARK;
+                        CT = Text_ARK;
+
+                        if(Round < 10) begin
+                            Rst_SBT = 1;
+                            Round = Round + 4'b0001;
+									 pres_state = SubBytes;
+                        end
+                        else begin
+                            pres_state = End;
+                        end
+                    end
+                    else begin
+                        Rst_ARK = 0;
+                    end
+                end
+                SubBytes 	: 	begin
+                    if  (Ry_SBT) begin
+                        Rst_SHR = 1;
+                        Text = Text_SBT;
+								CT = Text_SBT;
+								pres_state = ShiftRows;
+                    end
+                    else begin
+                        Rst_SBT = 0;
+                    end
+                end
+                ShiftRows 	:  begin
+                    if  (Ry_SHR) begin
+                        Text = Text_SHR;
+								CT = Text_SHR;
+                        if(Round == 10) begin
+                            Rst_ARK = 1;
+                            pres_state = AddRoundKey;
+                        end
+                        else begin
+                            Rst_MXC = 1;
+                            pres_state = MixCols;
+                        end
+                    end
+                    else begin
+                        Rst_SHR = 0;
+                    end
+                end
+                MixCols 		: 	begin
+                    if  (Ry_MXC) begin
+                        Text = Text_MXC;
+								CT = Text_MXC;
+                        Rst_ARK = 1;
+                        pres_state = AddRoundKey;
+                    end
+                    else begin
+                        Rst_MXC = 0;
+                    end
+                end
+                End 		:  begin
+                    Ry = 1;
+                end
+                default: begin
+                    Rst_ARK = 1;
+                    pres_state = AddRoundKey;
+                end
+            endcase
+				
+				KeySel      = Round;
+        end
+    end
 
 
+    always @(pres_state)
+    begin
+        case (pres_state)
+            Begin 			: begin En_ARK = 0; En_SBT = 0; En_SHR = 0;	En_MXC = 0; end
+            AddRoundKey 	: begin En_ARK = 1; En_SBT = 0; En_SHR = 0;	En_MXC = 0;	end
+            SubBytes  	   : begin En_ARK = 0; En_SBT = 1; En_SHR = 0;	En_MXC = 0;	end
+            ShiftRows  	   : begin En_ARK = 0; En_SBT = 0; En_SHR = 1;	En_MXC = 0; end
+            MixCols  		: begin En_ARK = 0; En_SBT = 0; En_SHR = 0;	En_MXC = 1; end
+            End 			   : begin En_ARK = 0; En_SBT = 0; En_SHR = 0;	En_MXC = 0; end
+				default        : begin En_ARK = 0; En_SBT = 0; En_SHR = 0;	En_MXC = 0; end
+        endcase
+    end
 
-	 always @(ModuleRy or pres_state or Round)
-	 begin
-		if(ModuleRy)
-		begin
-			if (Round > 0)
-			begin
-				if (pres_state ==AddRoundKey)
-				begin
-					Round=Round-1;
-				end
-				case (pres_state)
-					AddRoundKey : next_state = InvSubBytes;
-					InvSubBytes : next_state = InvShiftRows;
-					InvShiftRows : next_state = InvMixColumns;
-					InvMixColumns : next_state = AddRoundKey;
-				endcase
-			end
-			else
-			begin
-				case (pres_state)
-					InvSubBytes : next_state = InvShiftRows;
-					InvShiftRows : next_state = AddRoundKey;
-					AddRoundKey : done = 1;
-					default : done = 0;
-				endcase
-			end
-		end
-	 end
-
-	 always @(pres_state)// Turn on/off modules
-	 begin
-		case (pres_state)
-			AddRoundKey :   begin AddEn = 1; SubEn = 0; ShiftEn = 0; MixEn=0; end
-			InvSubBytes :   begin AddEn = 0; SubEn = 1; ShiftEn = 0; MixEn=0; end
-			InvShiftRows :  begin AddEn = 0; SubEn = 0; ShiftEn = 1; MixEn=0; end
-			InvMixColumns : begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=1; end
-		endcase
-	 end
-
-	 always @(posedge Clk)
-	 begin
-		if (done)
-		begin
-			PT=ModifiedText;
-			Ry=1;
-		end
-	 end
-	 
-
-
-endmodule
+endmodule 

@@ -31,7 +31,6 @@ module AES_Decryptor(
 	 
 	 //	Embedded Signals
 	 wire [127:0] Text;
-	 wire [127:0] ModifiedText;
 	 
 	 // AddRoundKey
 	 wire AddRy;

@@ -27,25 +27,21 @@ module AddRoundKey(
     output reg	[127:0] Out_ARK,
     input 		[127:0] Key_ARK
     );
+	 
 	 integer i;
-	 
-	 // Embedded signal declaration
-	 reg [127:0] Out_temp;
-	 
-	 always @ (posedge Clk or posedge Rst)
+	 always @ (posedge Clk)
 	 begin
 		if (Rst)
 			begin
 				Ry_ARK = 0;
-				Out_temp = 0;
+				Out_ARK = 0;
 			end
 		else
 			if (En_ARK)
 			begin
-				for (i = 0; i < 128; i = i + 1)begin
-					Out_temp [i] = In_ARK [i] ^ Key_ARK [i];
+				for (i = 0; i < 128; i = i + 1) begin
+					Out_ARK [i] = In_ARK [i] ^ Key_ARK [i];
 				end
-				Out_ARK = Out_temp; 
 				Ry_ARK = 1;
 			end
 			else

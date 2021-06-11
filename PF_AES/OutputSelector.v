@@ -25,23 +25,24 @@ module OutputSelector(
    input       [127:0] CT,
    output reg  [127:0] Result,
    input       En,
+	input       Clk,
    output reg  Ry
    );
 	
-	always @*
+	always @(posedge Clk)
 	begin
 	if(Rst) 
-		begin
-			Ry = 1'b0;
-			Result = 128'h00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00;
-		end
+    begin
+        Ry = 1'b0;
+        Result = 128'h00_00_00_00_00_00_00_00_00_00_00_00_00_00_00_00;
+    end
 	else if(En)
 		begin
-			Ry = 1'b1;
 			if(Sel)
 				Result = CT;
 			else
 				Result = PT;
+			Ry = 1'b1;
 		end
 	end
 

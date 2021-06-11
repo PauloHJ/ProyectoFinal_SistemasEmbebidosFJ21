@@ -1,0 +1,7 @@
+.idea
+*.sdb
+*tmp*
+*.obj
+isim
+*.exe
+*.wdb

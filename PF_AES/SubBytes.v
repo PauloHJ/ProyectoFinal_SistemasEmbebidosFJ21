@@ -35,14 +35,14 @@ module SubBytes(
 	integer i;
 
   	initial begin 
-		$readmemh("sbox.mem", sbox); 	
+		$readmemh("sbox.data", sbox); 	
 		Out_temp = 0;
 		Ry_SBT = 0;		
 	end		
 	
 	
 	// Output Result
-  always @(posedge Clk or posedge Rst)
+  always @(posedge Clk)
   begin
     if (Rst)
 		begin

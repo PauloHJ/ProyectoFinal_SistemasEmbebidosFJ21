@@ -31,145 +31,112 @@ module StateMachineDecryptor(
     output reg ShiftEn,
     output reg MixEn,
     input AddRy,
-	 input SubRy,
-	 input ShiftRy,
-	 input MixRy,
+    input SubRy,
+    input ShiftRy,
+    input MixRy,
     output reg [127:0] Text,
-	 input [127:0] MixText,
-	 input [127:0] ShiftText,
-	 input [127:0] SubText,
-	 input [127:0] AddText
+    input [127:0] MixText,
+    input [127:0] ShiftText,
+    input [127:0] SubText,
+    input [127:0] AddText
     );
 
 
 	 localparam
-		AddRoundKey = 3'b000,
-		InvSubBytes = 3'b001,
-		InvShiftRows = 3'b010,
-		InvMixColumns = 3'b011,
-		FinishState = 3'b100,
-		HoldState = 3'b111;
+		AddRoundKey     = 3'b000,
+		InvSubBytes     = 3'b001,
+		InvShiftRows    = 3'b010,
+		InvMixColumns   = 3'b011,
+		FinishState     = 3'b100,
+		HoldState       = 3'b111;
 
 	 //	Embedded signals
 	 reg [3:0] Round;
 	 reg [2:0] pres_state;
-	 reg [2:0] next_state;
 
-
-	 always @(negedge Clk)
-	 begin
-		if (Rst)
-		begin
-			pres_state = HoldState;
-			SelKey = 10;
-			PT = CT;
-		end
-		else if (En)
-		begin
-			pres_state = next_state;
-			SelKey = Round;
-			PT = Text;
-		end
-	end
 
 	 always @(negedge Clk)
 	 begin
 		if (Rst)
 		begin
 			Round=10;
-			next_state = AddRoundKey;
+			pres_state = HoldState;
 			Ry=0;
+			PT = CT;
 			Text = CT;
+			SelKey = 10;
 		end
 		else if(En)
-		begin
+		begin			
 			case (pres_state)
 				InvShiftRows : begin
 					if (ShiftRy) begin
-						next_state = InvSubBytes;
+						PT = ShiftText;
 						Text = ShiftText;
+						pres_state = InvSubBytes;
 					end
 				end
 				InvSubBytes : begin
 					if (SubRy) begin
-						next_state = AddRoundKey;
+						PT = SubText;
 						Text = SubText;
+						pres_state = AddRoundKey;
 					end
 				end
 				AddRoundKey : begin 
 					if (AddRy)
 					begin
+						PT = AddText;
 						Text = AddText;
 						
 						if(Round == 10)
 						begin
-							next_state = InvShiftRows;
 							Round = Round - 1;
+							pres_state = InvShiftRows;
 						end
 						else if(Round > 0)
 						begin
-							next_state = InvMixColumns;
+							pres_state = InvMixColumns;
 						end
 						else
 						begin
-							next_state = FinishState;
+							pres_state = FinishState;
 						end
 					end
 				end
 				InvMixColumns : begin
 					if(MixRy)
 					begin
+						PT = MixText;
 						Text = MixText;
-						Round = Round - 1;
-						next_state = InvShiftRows;
+						Round = Round - 4'b0001;
+						pres_state = InvShiftRows;
 					end
 				end
 				FinishState: begin
-					Text = AddText;
 					Ry=1;
 				end
-				default: next_state = AddRoundKey; 
+				HoldState: begin
+					pres_state = AddRoundKey; 
+				end
+				default: pres_state = AddRoundKey; 
 			endcase
+
+			SelKey = Round;
 		end
 	 end
 
 	 always @(pres_state)// Turn on/off modules
 	 begin
 		case (pres_state)
-			FinishState :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
-			HoldState :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
-			AddRoundKey :   begin AddEn = 1; SubEn = 0; ShiftEn = 0; MixEn=0; end
-			InvSubBytes :   begin AddEn = 0; SubEn = 1; ShiftEn = 0; MixEn=0; end
-			InvShiftRows :  begin AddEn = 0; SubEn = 0; ShiftEn = 1; MixEn=0; end
-			InvMixColumns : begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=1; end
+			FinishState     :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
+			HoldState       :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
+			AddRoundKey     :   begin AddEn = 1; SubEn = 0; ShiftEn = 0; MixEn=0; end
+			InvSubBytes     :   begin AddEn = 0; SubEn = 1; ShiftEn = 0; MixEn=0; end
+			InvShiftRows    :   begin AddEn = 0; SubEn = 0; ShiftEn = 1; MixEn=0; end
+			InvMixColumns   :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=1; end
+			default         :   begin AddEn = 0; SubEn = 0; ShiftEn = 0; MixEn=0; end
 		endcase
 	 end
 	 
 endmodule
-
-
-//	always
-//	begin
-//	  #10 Clk = ~Clk; #10 Clk = ~Clk;
-//	end;
-//
-//	initial begin
-//		// Initialize Inputs
-//		Rst = 0;
-//		Clk = 0;
-//		En = 0;
-//		CT = 0;
-//		ModuleRy = 0;
-//		ModifiedText = 0;
-//
-//		// Wait 100 ns for global reset to finish
-//		#100;
-//        
-//		// Add stimulus here
-//		Rst = 1; #20; Rst = 0; #20; 
-//		En = 1;
-//	
-//		#200;
-//		ModuleRy = 1;
-//
-//	end

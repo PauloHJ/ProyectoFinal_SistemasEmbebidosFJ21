@@ -31,7 +31,7 @@ module InvSubBytes(
  
  always @(*)
  begin 
-   Ry = (En == 0) ? 0 : 1;
+   Ry = (En == 0) ? 0 : 1'b1;
 
  
 //16 parallel muxes.
