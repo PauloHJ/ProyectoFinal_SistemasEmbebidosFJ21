@@ -14,9 +14,7 @@ The development of this project is only available for use in an FPGA Nexys 3.
 - [Installation](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#installation)
 - [Features](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#features)
   - [Getting Started](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#getting-started)
-  - [Tutorials](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#tutorials)
-  - [Sample Projects](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#sample-projects)
-- [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
+ - [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
 
 ## Requirements
 
@@ -31,8 +29,6 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 ## Installation
 ## Features
 ### Getting Started
-### Tutorials
-### Sample Projects
 ## License and credits
 
 The Design Software and the Nexys 3 FPGA board was development by [Xilink Company](https://www.xilinx.com/) and [Digilent Company](https://store.digilentinc.com/)
