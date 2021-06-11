@@ -11,10 +11,8 @@ The development of this project is only available for use in an FPGA Nexys 3.
 ## Content
 
 - [Requirements](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#content)
-- [Installation](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#installation)
 - [Features](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#features)
-  - [Getting Started](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#getting-started)
- - [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
+- [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
 
 ## Requirements
 
@@ -26,9 +24,13 @@ Also the user must have an FPGA type [Nexys 3 Spartan-6 LX16 FPGA](https://refer
 <p align = "center">
 <img src="https://user-images.githubusercontent.com/33244949/121391367-e7799a80-c913-11eb-9035-3452a47f5bba.jpg" width="250" height="250" />
 
-## Installation
+The user must have installed nodejs and Yarn on a Windows PC to be able to run the full project.
+  
 ## Features
-### Getting Started
+  
+User Interface
+The platform uses a Single Web Application developed with React.
+The interface allows the user to upload two files: The Key and the data to be Encrypted/Decrypted. And also has a switch to let the user decide what is going to be done with that data.
 ## License and credits
 
 The Design Software and the Nexys 3 FPGA board was development by [Xilink Company](https://www.xilinx.com/) and [Digilent Company](https://store.digilentinc.com/)
