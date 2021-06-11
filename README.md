@@ -41,7 +41,7 @@ Yantio' is the first project developed by the company Embedded System Solution, 
 For now, the development of this project is only available for use in an FPGA Nexys 3. However, we hope in the future to continue with the project so that it can be implemented in other FPGAs in the family, such as Basis 2 or Basis 3.
 ## **Objective**
 The goal of the program is to protect user information by creating a more secure transmission for your data, and to demonstrate that it can be deployed in more complex modules by using FPGAs. This approach was chosen, since the use of this tool in communication is very high today, thanks to its speed and low costs.
-## **Organization**
+## **Features**
 ![](Aspose.Words.e66e6cd4-c252-4b76-8a4e-d9d7ef1c479d.001.jpeg)
 
 For more information, refeer to /User Guide/README in this repository
