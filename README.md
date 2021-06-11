@@ -11,10 +11,8 @@ The development of this project is only available for use in an FPGA Nexys 3.
 ## Content
 
 - [Requirements](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#content)
-- [Installation](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#installation)
 - [Features](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#features)
-  - [Getting Started](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#getting-started)
- - [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
+- [License and credits](https://github.com/PauloHJ/ProyectoFinal_SistemasEmbebidosFJ21/blob/main/README.md#license-and-credits)
 
 ## Requirements
 
