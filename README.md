@@ -33,7 +33,7 @@
 
 
 
-##**Description**
+## **Description**
 
 Today, we are highly dependent on technology, which is why we need our information to be transmitted securely, as our high-value data is in danger of falling into the wrong hands and our information can be used incorrectly and without our consent. affecting our personal integrity. With this goal in mind, we developed our pioneering project: Yantio’.
 
