@@ -1,6 +1,5 @@
 ﻿
-# **Yantio'**
-# **A Project of Embedded System Solution**
+# **Yantio': A Project of Embedded System Solution**
 
 
 
